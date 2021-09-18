@@ -6,8 +6,8 @@ WiFiServer server(80);
 
 //---------------------Credenciales de WiFi-----------------------
 
-const char* ssid     = "✖‿✖";
-const char* password = "0291nino@";
+const char* ssid     = "AndroidAPE3C9";
+const char* password = "jurr1306";
 
 //---------------------VARIABLES GLOBALES-------------------------
 int contconexion = 0;
