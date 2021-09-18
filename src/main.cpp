@@ -6,8 +6,8 @@ WiFiServer server(80);
 
 //---------------------Credenciales de WiFi-----------------------
 
-const char* ssid     = "-----";
-const char* password = "-----";
+const char* ssid     = "✖‿✖";
+const char* password = "0291nino@";
 
 //---------------------VARIABLES GLOBALES-------------------------
 int contconexion = 0;
@@ -38,7 +38,7 @@ String pagina = "<!DOCTYPE html>"
 //---------------------------SETUP--------------------------------
 void setup() {
   Serial.begin(115200);
-  Serial.println("");
+  Serial.println("Se inicializo con una velocidad de 115200 baudios \n");
   
   pinMode(salida, OUTPUT); 
   digitalWrite(salida, LOW);
@@ -49,8 +49,10 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED and contconexion <50) { 
     ++contconexion;
     delay(500);
-    Serial.print(".");
+    Serial.print("No se logró conectar\n");
   }
+  Serial.print("Se logró conectar a WIFI con exito. \n");
+
   if (contconexion <50) {
       //para usar con ip fija
       //IPAddress ip(192,168,1,180); 
